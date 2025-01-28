@@ -63,16 +63,21 @@
 - **Scanning & Analysis:** Choose a tool from the list, provide the target URL, and initiate the scan.
 - **Report Generation:** After scanning, download a PDF report of the results.
 
-## Contributing
+## Remember
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Create a new Pull Request.
+- In index.js you need to replace the Firebase configuration in your code with your own config details:
+  ```bash
+  const firebaseConfig = {
+  apiKey: "<YOUR_API_KEY>",
+  authDomain: "<YOUR_AUTH_DOMAIN>",
+  databaseURL: "<YOUR_DATABASE_URL>",
+  projectId: "<YOUR_PROJECT_ID>",
+  storageBucket: "<YOUR_STORAGE_BUCKET>",
+  messagingSenderId: "<YOUR_MESSAGING_SENDER_ID>",
+  appId: "<YOUR_APP_ID>" };
+    ```
+- In contact.html you need to replace the w3forms access-key configuration in:
+ ```bash
+  name="access_key" value="<your_access_key>">
+  ```
 
-
-
----
-
-Feel free to adjust the content according to your project specifics!
