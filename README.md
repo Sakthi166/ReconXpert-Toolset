@@ -71,13 +71,7 @@
 4. Push to the branch (`git push origin feature-name`).
 5. Create a new Pull Request.
 
-## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-For any inquiries, please reach out to [your-email@example.com].
 
 ---
 
