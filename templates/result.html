@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - ReconXpert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        .results {
+            margin: 2rem auto;
+            padding: 1rem;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .results h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        table, th, td {
+            border: 1px solid #dddddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 1rem;
+            color: #888888;
+        }
+
+        button {
+            display: block;
+            margin: 1rem auto;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .download-button {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .download-button form button {
+            text-decoration: none;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .download-button form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>ReconXpert</h1>
+        </div>
+    </header>
+
+    <!-- Results Section -->
+    <section class="results">
+        <h2>Tool Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Tool Name: {{ tool }}</th>
+                </tr>
+                <tr>
+                    <th>Command</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for line in results %}
+                    <tr>
+                        <td>{{ line.command }}</td>
+                        <td><pre>{{ line.output }}</pre></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Download Report Button -->
+    <div class="download-button">
+        <form action="{{ url_for('download_report') }}" method="POST">
+            <input type="hidden" name="tool" value="{{ tool }}">
+            <input type="hidden" name="target" value="{{ target }}">
+            {% for line in results %}
+                <input type="hidden" name="results" value="{{ line.output }}">
+            {% endfor %}
+            <button type="submit">Download PDF</button>
+        </form>
+    </div>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer">&copy; 2025 ReconXpert. All rights reserved.</p>
+    </footer>
+</body>
+</html>
