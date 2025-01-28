@@ -36,7 +36,7 @@
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/ReconXpert-WebTool.git
+    git clone https://github.com/Sakthi166/ReconXpert-Toolset.git
     cd ReconXpert-WebTool
     ```
 
