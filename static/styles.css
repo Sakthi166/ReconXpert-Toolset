@@ -1,0 +1,566 @@
+/* General Styles */
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-decoration: none 
+}
+
+/* General header styling */
+.navbar {
+    position: sticky;
+    top: 0; /* Keeps the header at the top when scrolling */
+    z-index: 1000; /* Makes sure the header stays on top of other content */
+    background-color: #030303;
+    padding: 10px 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-decoration: none 
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Ensures logo and navigation are vertically aligned */
+    width: 100%;
+    max-width: 1200px;  /* Container width */
+    margin: 0 auto;
+    text-decoration: none 
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center; /* Align logo and icon properly */
+    text-decoration: none; /* Removes underline */
+}
+
+.logo a {
+    text-decoration: none; /* Ensures no underline for links */
+    color: inherit; /* Keeps the color consistent with the logo */
+}
+
+
+
+.nav-links {
+    display: flex;
+    align-items: center;  /* Ensure links are vertically centered */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px; /* Adjusted margin */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7f8cfc;
+}
+
+/* Login And Sing Up  Styles */
+
+.button-17 {
+    display: inline-block;
+    align-items: center;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #0adb7d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #00ff88;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+
+    font-size: 1rem;
+    font-weight: bold;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    z-index: 0;
+    transition: all 0.3s ease;
+  }
+  
+
+
+  .button-17:hover {
+    background: #00ff88;
+    color: #000;
+  }
+  
+  .button-17:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+  
+  .button-17:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+  
+  .button-17:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+  }
+  
+  .button-17:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+  .button-17:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+  }
+  
+  .button-17:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+  }
+  
+
+/* Hero Section */ 
+.section.hero {
+    min-height: 100vh; /* Full-screen height */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    flex-direction: column; /* Stack items vertically */
+    background-color: #0d1117; /* Ensure background matches */
+    text-align: center;
+}
+
+.hero .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #00ff88, #58a6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #c9d1d9;
+    margin-bottom: 2rem;
+}
+
+.pen-test-button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ff88;
+    background-color: transparent;
+    border: 2px solid #0b2c1d;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.pen-test-button:hover {
+    background-color: #00ff88;
+    color: #000;
+}
+
+/* About Section */
+.section.about {
+    min-height: 100vh; /* Full-screen height */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    flex-direction: column; /* Stack items vertically */
+    background-color: #ffffff; /* Ensure background matches */
+    text-align: center;
+}
+
+.about {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+.about h2 {
+    color: #020202;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Tool Description Section */
+
+/* Section Title Styling */
+/* Section Title Styling */
+.section-title {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #00ff88; /* Matches the green accent color */ 
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00ff88; /* Optional underline effect */
+    background-color: #1e1e2f; /* Dark background for the title */
+    padding: 1rem 2rem; /* Adds padding around the text */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.section#tools {
+    min-height: 100vh; /* Full-screen height */
+    display: flex;
+    flex-direction: column; /* Ensures vertical layout */
+    align-items: flex-start; /* Aligns all items to the left */
+    justify-content: flex-start; /* Aligns items to the top */
+    background-color: #0d1117;
+    padding: 3rem 1rem;
+    color: #8898a8;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.tool-card {
+    background-color: #2a2a40;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    text-align: left; /* Ensures everything inside is aligned to the left */
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px; /* Add some spacing below the heading */
+    color: #7193f3;
+    text-align: left; /* Explicitly aligns the title to the left */
+}
+
+.usage {
+    margin-top: 15px;
+    background-color: #1a1a2b;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    color: #83c5be;
+    text-align: left; /* Aligns usage content to the left */
+}
+
+code {
+    display: block;
+    word-wrap: break-word;
+    text-align: left; /* Ensures code examples align to the left */
+}
+
+
+
+#tutorials {
+    padding: 3rem 2rem;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+.tutorials-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Class for h2 styling */
+.heading-style {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Class for p styling */
+.paragraph-style {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dad7cd;
+}
+
+header {
+    background-color: #588157;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: #344e41;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #3a5a40;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #344e41;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #3a5a40;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* From Uiverse.io by barisdogansutcu */ 
+button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
+
+.check-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.check-box svg {
+    width: 40px;
+    margin: 20px;
+}
+
+svg path {
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.active {
+    background: #ff2b75;
+    transition: 1s;
+}
+
+.active .check-box {
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.active p {
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.active svg path {
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+
+
+footer {
+    background-color:#12192c;
+    color: white;
+    text-align: center;
+    padding: 30px; /* Reduced padding */
+    width: 100%;
+    max-height: 100px; /* Reduced max-height */
+    font-size: 13px; /* Reduced font size for a smaller footer */
+    line-height: 1.2; /* Reduced line-height for a more compact look */
+    position: relative;
+    bottom: 0;
+}
+
+.foot.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, #00ff88, #58a6ff);
+    text-align: center;
+}
+
+.warning-banner {
+    background-color: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+

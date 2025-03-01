@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ReconXpert</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script type="module" src="/static/index.js" defer></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="/">Go back</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class="bx bxl-xing"></i>ReconXpert</h2>
+            <div class="text-item">
+                <h2>Welcome! <br><span>To Your Web Toolkit</span></h2>
+                <p>Transforming Kali CLI tools into a sleek, web-powered arsenal</p>
+            </div>
+        </div>
+        <div class="login-section">
+            <!-- Login Form -->
+            <div class="form-box login">
+                <form id="login-form">
+                    <h2>Sign In</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-envelope"></i></span>
+                        <input type="email" id="login-email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                        <input type="password" id="login-password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-password">
+                        <label><input type="checkbox">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn">Log In</button>
+                    <div class="create-account">
+                        <p>Forgot your password? <a href="#" class="forgot-password-link">Reset Password</a></p>
+                        <p>Create a new account? <a href="#" class="register-link">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Forgot Password Form -->
+            <div class="form-box forgot-password" style="display: none;">
+                <form id="forgot-password-form">
+                    <h2>Forgot Password</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-envelope"></i></span>
+                        <input type="email" id="reset-email" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <button type="submit" class="btn">Send Reset Link</button>
+                    <div class="create-account"> 
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form-box register">
+                <form id="register-form">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-user"></i></span>
+                        <input type="text" id="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-envelope"></i></span>
+                        <input type="email" id="register-email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="bx bxs-lock-alt"></i></span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-password">
+                        <label><input type="checkbox">I agree with this statement</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="create-account">
+                        <p>Already have an account? <a href="#" class="login-link">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"></script>
+
+    <!-- JavaScript to Toggle Forms -->
+    <script>
+        document.querySelector(".forgot-password-link").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.querySelector(".login").style.display = "none";
+            document.querySelector(".forgot-password").style.display = "block";
+        });
+
+        document.querySelectorAll(".login-link").forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                document.querySelector(".forgot-password").style.display = "none";
+                document.querySelector(".login").style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>

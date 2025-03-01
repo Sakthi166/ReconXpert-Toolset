@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Recon Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap"rel="stylesheet">
+    <meta name="description" content="Advanced Recon Suite: Professional-grade tools for web penetration testing and vulnerability assessment.">
+    <meta name="author" content="Your Name/Company">
+    <meta name="keywords" content="Penetration Testing, Reconnaissance Tools, Cybersecurity">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo"><h2><i class="bx bxl-xing"></i> ReconXpert</h2></a>
+    
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#tools">Tools</a>
+                <a href="#tutorials">Tutorials</a>
+                <a href="#contact-form">Contact</a>
+                <a href="/help.html">Help</a>
+            </nav>
+    
+            <!-- Buttons -->
+            <div class="nav-buttons">
+                <a href="log.html"><button class="button-17">Login</button></a>
+                <a href="/templates/log.html"><button class="button-17">Sign Up ➔</button></a>
+            </div>
+        </div>
+    </header>
+    
+    
+    <section class="section hero">
+        <div class="main-content">
+            <div class="pen-test-button" aria-label="Professional Web Penetration Testing Tools">
+                Professional Web Penetration Testing Tools
+            </div>
+            <h1 class="title">Advanced Recon Suite</h1>
+            <p class="description">
+                Professional-grade reconnaissance toolkit for comprehensive web <br>
+                application security testing and vulnerability assessment.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>
+                <p>Welcome to ReconXpert, your one-stop platform for mastering cybersecurity tools and techniques.</p>
+                <p>We provide in-depth descriptions and practical usage guides for a variety of cybersecurity tools, enabling users to expand their knowledge and skillsets with confidence. For our registered members, ReconXpert offers hands-on capabilities to test target systems using an array of integrated tools.</p>
+                
+                <p>Our platform delivers real-time insights, helping users strengthen their cybersecurity measures effectively. To make your experience even more interactive, we have an AI-powered chatbot available exclusively to logged-in members. Whether you need help, quick tips, or technical support, our chatbot is here to assist you 24/7 and make your journey easier and more efficient. We are always open to feedback, queries, and collaboration through a dedicated Contact Us section.</p>
+                
+                <p>At ReconXpert, we look forward to integrating innovation with accessibility and interactivity in empowering the next generation of cybersecurity experts. Join us today, and let us secure the digital frontier!</p>
+                
+            </p>
+        </div>
+    </section>
+
+    <section id="tools" class="section">
+        <div class="tool-container">
+            <h2 class="section-title">Tools Description</h2>
+            <div class="grid-container">
+                <div class="tool-card">
+                    <h3>Nmap</h3>
+                    <p> A network scanning tool used for discovering hosts and services on a network.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nmap [options] [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nmap -sS 192.168.1.1</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Nmap Vulnerability Scanning</h3>
+                    <p>Nmap's vulnerability scanning feature allows you to identify potential vulnerabilities in the target system.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nmap -sV --script vuln [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nmap -sV --script vuln 192.168.1.1</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Hydra</h3>
+                    <p>Hydra is a A fast brute force login cracker for various protocols.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>hydra -l [username] -P [password_list] [target] [service]</code>
+                    </div>
+                    <div class="usage">
+                            <strong>Example:</strong>
+                            <code>hydra -l admin -P passwords.txt 192.168.1.1 ssh</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>John the Ripper</h3>
+                    <p>John the Ripper is a password cracking tool. It can be used to perform dictionary, brute force, and hybrid attacks on various password hashes. </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>john [hash_file] --wordlist=[wordlist_file]</code>
+                    </div>
+                    <div class="usage">
+                            <strong>Example:</strong>
+                            <code>john hash.txt --wordlist=rockyou.txt</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>WPScan</h3>
+                    <p>WPScan is used for identifying security issues in WordPress websites, such as vulnerable plugins, themes, and weak credentials.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>wpscan --url [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>wpscan --url http://example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Sublist3r</h3>
+                    <p>Sublist3r is a tool used to gather subdomains of a target domain.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>sublist3r -d [domain]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>sublist3r -d example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>TheHarvester</h3>
+                    <p>TheHarvester is a tool used to gather emails, subdomains, hosts, and employee names from various public sources. </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>theharvester -d [domain] -b [source]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>theharvester -d example.com -b google</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>DNSRecon</h3>
+                    <p>DNSrecon is a tool used to perform DNS reconnaissance and subdomain enumeration. </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>dnsrecon -d [domain]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>dnsrecon -d example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Wafw00f</h3>
+                    <p>Wafwoof is a tool used to fingerprint web application firewalls (WAFs) and determine their version. </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>wafw00f [url]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>wafw00f http://example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>NExtexc</h3>
+                    <p>NExtexc is a tool used to extract links and emails from web pages.  </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nextexc [options] [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code> nextexc -d example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Nslookup</h3>
+                    <p>Nslookup is a command-line tool used to query DNS servers for information about domain names and IP addresses.  </p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nslookup [domain]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nslookup example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Nikto</h3>
+                    <p>Nikto is a tool used to perform web server scanning and vulnerability testing.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nikto -h [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nikto -h http://example.com</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Gobuster</h3>
+                    <p>Gobuster is a tool used to brute force directories and files on web servers.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>gobuster dir -u [url] -w [wordlist]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>gobuster dir -u http://example.com -w common.txt</code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>WhatWeb</h3>
+                    <p>Whatweb is a tool used to identify web technologies and version information.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>whatweb [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>hatweb http://example.com </code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>DNSenum</h3>
+                    <p> DNSenum is a tool used to perform DNS enumeration and gather information about a target domain.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>dnsenum [domain]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>dnsenum example.com </code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Nmap Basic Script Scan</h3>
+                    <p>Nmap's script scanning feature allows you to run pre-defined scripts against a target system to identify potential vulnerabilities.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nmap -sC [target]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nmap -sC 192.168.1.1 </code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Check Live Hosts</h3>
+                    <p>Nmap's ping scan feature allows you to identifies active hosts in a network.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>nmap -sn [target_range]</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>nmap -sn 192.168.1.0/24 </code>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <h3>Msfconsole port scan</h3>
+                    <p>Metasploit's msfconsole allows you to perform port scanning and vulnerability testing.</p>
+                    <div class="usage">
+                        <strong>Usage:</strong>
+                        <code>msfconsole -q -x use auxiliary/scanner/portscan/tcp; set RHOSTS [target]; run</code>
+                    </div>
+                    <div class="usage">
+                        <strong>Example:</strong>
+                        <code>msfconsole -q -x "use auxiliary/scanner/portscan/tcp; set RHOSTS 192.168.1.1; run</code>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorials">
+    <div class="tutorials-container">
+        <h2 class="heading-style">How to Use Advanced Recon Suite</h2>
+        <p class="paragraph-style">In this tutorial, we walk through the key features of the Advanced Recon Suite and how you can use them to enhance your recon efforts.</p>
+
+        <!-- Embed the YouTube Video -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/x2FqXNToFjc?si=8KaUpMWOL2zTfPBj" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <section class="intro">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
+    </section>
+    
+    <section id="contact-form" class="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <h2>Send a Message</h2>
+        <input type="hidden" name="access_key" value="f4883122-bb81-4bc9-9e26-af76b6d7eaad">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <div class="container">
+            <button id="btn" type="submit">
+                <p id="btnText">Submit</p>
+                <div class="check-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+    </form>
+</section>
+
+    
+    <script>
+    const btn = document.querySelector("#btn");
+    const btnText = document.querySelector("#btnText");
+    const form = document.querySelector("form");
+
+    btn.onclick = (event) => {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Check if all required fields are filled
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const message = document.querySelector("#message").value;
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields before submitting.");
+            return; // Stop the function if any field is empty
+        }
+
+        // If all fields are filled, show thank you message and trigger animation
+        btnText.innerHTML = "Thanks";
+        btn.classList.add("active");
+
+        // Optionally, you can submit the form programmatically after a delay
+        setTimeout(() => {
+            form.submit(); // Submit the form after a short delay
+        }, 1000); // Adjust the delay as needed (1000ms = 1 second)
+    };
+
+    function showPopup(event) {
+        event.preventDefault(); // Prevent actual form submission
+        alert("Thank you for your message! We'll get back to you soon.");
+    }
+    </script>
+
+    
+    
+    <footer>
+        <h2><i class="bx bxl-xing"></i> ReconXpert</h2>
+        Empowering the next generation of cybersecurity professionals <br>
+        © 2025 _ReconXpert. All rights reserved.
+    
+    </footer>
+
+</body>
+</html>
