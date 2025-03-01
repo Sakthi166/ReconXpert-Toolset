@@ -76,8 +76,4 @@
   messagingSenderId: "<YOUR_MESSAGING_SENDER_ID>",
   appId: "<YOUR_APP_ID>" };
     ```
-- In contact.html you need to replace the w3forms access-key configuration in:
- ```bash
-  name="access_key" value="<your_access_key>">
-  ```
 
